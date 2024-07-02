@@ -1,0 +1,7 @@
+<template name="messages">
+    <div class="ui relaxed divided list">
+        {{#each message in messages}}
+            {{> messageItem content=message.content createdAt=message.createdAt}}
+        {{/each}}
+    </div>
+</template>
