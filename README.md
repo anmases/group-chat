@@ -1,3 +1,4 @@
+# Example of a real-time meteor chat app.
 ### Add dependencies of meteor (from atmosphere)
 - ej:
 ```sh
