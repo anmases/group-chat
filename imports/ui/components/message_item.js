@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import "./helpers";
 import "./message_item.html";
 import moment from "moment";
 import SimpleSchema from 'simpl-schema';
