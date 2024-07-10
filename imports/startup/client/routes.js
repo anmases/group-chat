@@ -28,6 +28,16 @@ FlowRouter.route("/register",{
 		BlazeLayout.render("app_body_public", {main:"registerPage"});
 	}
 });
+
+FlowRouter.notFound = {
+	name:"notFound",
+	action:(params, queryParams)=>{
+		console.log("login");
+		BlazeLayout.render("app_body_public", {main:"loginPage"});
+	}
+};
+
+
 //obtiene el nombre de la ruta actual
 FlowRouter.getRouteName();
 //accede a los parámetros de query de esa ruta

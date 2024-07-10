@@ -7,3 +7,5 @@ Template.newMessage.events({
         template.data.sendHandler(template.find("#content").value);
     }   
 });
+
+// FlowRouter.go("messages",{id:"messageId"}); Ejemplo de navegación.
