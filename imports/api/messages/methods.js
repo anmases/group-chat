@@ -23,7 +23,9 @@ export const saveMessage = new ValidatedMethod({
         date: {type:Date}
     }).validator(),
     run({content, date}){
-        //cuerpo del método
+        if(!this.userId){
+					throw new Meteor.Error("messages.add.unauthorized","Cannot create new message");
+				}
         return Messages.insert({content:content, createdAt:date});
     }
 

@@ -27,3 +27,7 @@ jquery
 blaze-html-templates
 kadira:flow-router
 kadira:blaze-layout
+react-template-helper
+accounts-password
+useraccounts:semantic-ui
+useraccounts:flow-routing

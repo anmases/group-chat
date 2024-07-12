@@ -3,18 +3,17 @@ import {Messages} from "../messages";
 
 export default function(){
     Meteor.publish("messages", function(){
-       /* if(!this.userId){    //Es una variable global que indica si se ha hecho login.
-            return this.ready();
+        if(!this.userId){    //Es una variable global que indica si se ha hecho login.
+            return this.ready({});
         }
-        return Messages.find({author:this.userId});   //find devuelve un puntero o referencia a la colección.
-        */
+        return Messages.find({});   //find devuelve un puntero o referencia a la colección.
      /*  const user = Meteor.users.findOne(this.userId);    //Meteor tiene un array de usuarios. Lo extraemos.
        if(user && user.isAdmin){
             return PrivateData.find({});
        }else{
         return this.ready();
-       }   */
-        return Messages.find({});
+       }  
+        return Messages.find({});*/
     });
 
   /*  Meteor.publishComposite("privateData", function(){

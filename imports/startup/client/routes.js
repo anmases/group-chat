@@ -6,6 +6,7 @@ import '../../ui/pages/login_page';
 import '../../ui/pages/register_page';
 import '../../ui/pages/messages_page';
 
+
 BlazeLayout.setRoot("body");
 FlowRouter.route("/",{
 	name:"home",
@@ -16,14 +17,14 @@ FlowRouter.route("/",{
 });
 FlowRouter.route("/login",{
 	name:"login",
-	action:(params, queryParams)=>{
+	action(params, queryParams){
 		console.log("login");
 		BlazeLayout.render("app_body_public", {main:"loginPage"});
 	}
 });
 FlowRouter.route("/register",{
 	name:"register",
-	action:(params, queryParams)=>{
+	action(params, queryParams){
 		console.log("register");
 		BlazeLayout.render("app_body_public", {main:"registerPage"});
 	}
@@ -36,6 +37,16 @@ FlowRouter.notFound = {
 		BlazeLayout.render("app_body_public", {main:"loginPage"});
 	}
 };
+
+//configuración de los templates de useraccounts:semantic-ui
+AccountsTemplates.configureRoute("signIn", {
+	name:"login",
+	path:"/login"
+});
+AccountsTemplates.configureRoute("signUp", {
+	name:"register",
+	path:"/register"
+});
 
 
 //obtiene el nombre de la ruta actual
